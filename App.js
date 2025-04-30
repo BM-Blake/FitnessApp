@@ -1,11 +1,13 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
-import FitnessWorld from './FitnessWorld'
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
+import FitnessWorld from './FitnessWorld';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-     <FitnessWorld/> 
+      {/* Add StatusBar for notification bar handling */}
+      <StatusBar barStyle="light-content" backgroundColor="black" />
+      <FitnessWorld />
     </SafeAreaView>
   );
 }
@@ -13,5 +15,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'black', // Ensure background matches the StatusBar
   },
 });
